@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-import sys
-
 
 def fizzbuzz():
     for i in range(0, 100):
-        sys.stdout.write(" ")
-        if ((i % 3) == 0):
-            sys.stdout.write('Fizz')
-        if ((i % 5) == 0):
-            sys.stdout.write('Buzz')
+        if (i % 3) == 0 and (i % 5) == 0:
+            print("FizzBuzz ", end="")
+        elif ((i % 3) == 0):
+            print("Fizz ", end="")
+        elif ((i % 5) == 0):
+            print("Buzz ", end="")
+        else:
+            print("{} ".format(i), end="")
