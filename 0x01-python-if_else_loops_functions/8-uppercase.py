@@ -10,3 +10,4 @@ def uppercase(str):
         str = chr(ord(str[0]) - ord('a') + ord('A')) + str[1:]
     # return the string
     return str
+
