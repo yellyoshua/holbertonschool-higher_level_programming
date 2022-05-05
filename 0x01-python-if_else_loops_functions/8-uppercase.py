@@ -1,13 +1,18 @@
 #!/usr/bin/python3
 
-def uppercase(str):
-    # check if the string is empty
-    if str == "":
-        return ""
-    # check if the first character is lowercase
-    if str[0] >= 'a' and str[0] <= 'z':
-        # convert the first character to uppercase
-        str = chr(ord(str[0]) - ord('a') + ord('A')) + str[1:]
-    # return the string
-    return str
+def is_char(c):
+    return ord(c) >= 97 and ord(c) <= 122
 
+
+def char_to_uppercase(c):
+    if is_char(c):
+        return chr(ord(c) - 32)
+    else:
+        return c
+
+
+def uppercase(str):
+    text = ""
+    for i in str:
+        text += char_to_uppercase(i)
+    print(f"{text}")
